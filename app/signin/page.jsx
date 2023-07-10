@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import LinkButton from '../components/link-button';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -82,14 +83,27 @@ export default function LoginPage() {
 
             <hr />
 
-            <div className="mt-4 mb-2">
+            <div className="mt-4 mb-2 flex flex-col items-center">
               <button
                 type="button"
                 onClick={() => signIn('google', { callbackUrl: '/me' })}
-                className="bg-nectar-extra-color-1 hover:bg-nectar-extra-color-1-hover text-white py-2 px-4 rounded text-sm mt-4 focus:outline-none"
+                className="bg-nectar-extra-color-1 hover:bg-nectar-extra-color-1-hover text-white py-2 px-4 rounded text-sm mt-4 focus:outline-none w-3/5"
               >
                 Login with Google
               </button>
+
+              <LinkButton 
+                text="Zymeworks Login" 
+                href="https://sso.zymeworks.com/adfs/ls/idpinitiatedsignon.aspx?logintoRP=https://project-center.theleadershipcircle.com/saml/metadata" 
+              />
+              <LinkButton 
+                text="Roche Login" 
+                href="https://wam.roche.com/idp/startSSO.ping?PartnerSpId=https%3A%2F%2Fproject-center.theleadershipcircle.com%2Fsaml%2Fmetadata"
+              />
+              <LinkButton 
+                text="Desjardins Login" 
+                href="https://myapps.microsoft.com/signin/3bcff797-6c7a-4c86-ac74-f15adee3c1dc?tenantId=728d20a5-0b44-47dd-9470-20f37cbf2d9a" 
+              />
             </div>
           </div>
         </div>
