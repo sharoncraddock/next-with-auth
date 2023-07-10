@@ -10,14 +10,14 @@ export const options = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        username: { label: "Username:", type: "text", placeholder: "your-username" },
-        password: { label: "Password:", type: "password", placeholder: "your-password" }
+        email: { label: "Email:", type: "email", placeholder: "Your Email" },
+        password: { label: "Password:", type: "password", placeholder: "Your Password" }
       },
       async authorize(credentials) {
         // temp hard-coded user for local development; no DB at this point
         const user = { id: "1", name: "Jon Smith", email: "jsmith@email.com", password: "password" }
 
-        if (credentials?.username === user.name && credentials?.password === user.password) {
+        if (credentials?.email === user.email && credentials?.password === user.password) {
           return user
         } else {
           return null
@@ -25,6 +25,5 @@ export const options = {
       }
     })
   ],
-
-  pages: {}
+  pages: { signIn: "/signin" }
 }
