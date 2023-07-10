@@ -1,7 +1,7 @@
 import { options } from "../api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth/next"
 import { redirect } from "next/navigation"
-import Link from "next/link"
+import LinkButton from '../components/link-button'
 
 async function Me() {
 
@@ -12,13 +12,19 @@ async function Me() {
   }
 
   return (
-    <section>
-      <h1>An authenticated page</h1>
-      <h2 >You are logged in as:</h2>
-      <p>{session?.user?.name}</p>
-      <p>{JSON.stringify(session)}</p>
-
-      <Link href="/api/auth/signout">Sign Out</Link>
+    <section className="flex justify-center md:items-center h-screen bg-white md:bg-custom-gray">
+      <div className="text-gray-700 md:w-3/5 max-w-xl bg-white rounded p-12">
+        <h1 className="text-xl font-bold mb-6">This is an authenticated page</h1>
+        <hr />
+        <h2 className="mt-6">You are logged in as:{' '} 
+          <span className="font-bold">{session?.user?.name}</span>
+        </h2>
+        <p className="mt-4">User account details:</p>
+        <p className="mb-10 font-bold">{JSON.stringify(session)}</p>
+        <div className="text-center">
+          <LinkButton text="Sign Out" href="/api/auth/signout" />
+        </div>
+      </div>
     </section>
   )
 }

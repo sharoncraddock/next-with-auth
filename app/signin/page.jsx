@@ -27,8 +27,8 @@ export default function LoginPage() {
       password,
     });
 
-    if (result.error) {
-      alert(result.error);
+    if (result?.error) {
+      alert(result?.error);
     } else {
       router.push('/me');
     }
