@@ -35,16 +35,18 @@ export default function LoginPage() {
   };
 
   return (
-    <section className="flex justify-center md:items-center h-screen bg-white sm:bg-custom-gray">
-      <div className="flex text-sm text-gray-700">
-        <div className="hidden bg-nectar-accent-color rounded-l-md">
-        </div>
+    <section className="flex justify-center md:items-center h-screen bg-white md:bg-custom-gray">
+      <div className="flex text-sm text-gray-700 md:w-3/5 max-w-xl">
+        <div className="
+          hidden md:block md:w-1/3 bg-nectar-accent-color 
+          bg-box-background bg-120 rounded-l-md
+        "></div>
 
-        <div className="bg-white rounded">
+        <div className="bg-white rounded md:w-2/3">
           <div className="p-8">
-          <h1 className="text-center text-2xl m-8">The Leadership Circle</h1>
+          <img src="lc-logo.png" width="200" className="md:-ml-3" />
           <form onSubmit={handleCredentialsLogin}>
-            <div className="mb-4">
+            <div className="mt-4 mb-4">
               <label htmlFor="email" className="block mb-1">
                 Email
               </label>
@@ -54,7 +56,10 @@ export default function LoginPage() {
                 placeholder="you@email.com"
                 value={email}
                 onChange={handleEmailChange}
-                className="w-full px-2 py-2 rounded border border-gray-400 focus:border-blue-500 focus:outline-none"
+                className="
+                  w-full px-2 py-2 rounded border border-gray-400 
+                  focus:border-blue-500 focus:outline-none
+                "
               />
             </div>
             <div className="mb-4">
@@ -67,19 +72,28 @@ export default function LoginPage() {
                 placeholder="********"
                 value={password}
                 onChange={handlePasswordChange}
-                className="w-full px-2 py-2 rounded border border-gray-400 focus:border-blue-500 focus:outline-none"
+                className="
+                  w-full px-2 py-2 rounded border border-gray-400 
+                  focus:border-blue-500 focus:outline-none
+                "
               />
             </div>
             <button
               type="submit"
-              className="bg-nectar-accent-color hover:bg-nectar-accent-color-hover text-white py-2 px-4 rounded text-sm focus:outline-none"
+              className="
+                bg-nectar-accent-color hover:bg-nectar-accent-color-hover 
+                text-white py-2 px-4 rounded text-sm focus:outline-none
+              "
             >
               Login
             </button>
           </form>
 
           <div className="text-center">
-            <a className="underline underline-offset-3 block py-8" href="/">Forgot/Create Password?</a>
+            <a 
+              className="underline underline-offset-3 block py-8" 
+              href="/">Forgot/Create Password?
+            </a>
 
             <hr />
 
@@ -87,7 +101,10 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => signIn('google', { callbackUrl: '/me' })}
-                className="bg-nectar-extra-color-1 hover:bg-nectar-extra-color-1-hover text-white py-2 px-4 rounded text-sm mt-4 focus:outline-none w-3/5"
+                className="
+                  bg-nectar-extra-color-1 hover:bg-nectar-extra-color-1-hover 
+                  text-white py-2 px-4 rounded text-sm mt-4 focus:outline-none w-40
+                "
               >
                 Login with Google
               </button>

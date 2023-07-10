@@ -12,11 +12,15 @@ module.exports = {
         'nectar-accent-color-hover': 'rgb(0, 124, 128)',
         'nectar-extra-color-1': 'rgb(0, 43, 73)',
         'nectar-extra-color-1-hover': 'rgb(0, 88, 149)',
-        'nectar-extra-color-2': '#92C0E9',
-        'nectar-extra-color-3': '#B7CD96',
         'custom-gray': '#ececec'
       },
-    },
+      backgroundImage: {
+        'box-background': "url('/box-background.svg')",
+      },
+      backgroundSize: {
+      '120': '120%',
+      }
+    }
   },
   plugins: [],
 }
