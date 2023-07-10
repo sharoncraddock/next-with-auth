@@ -85,7 +85,7 @@ export default function LoginPage() {
             <div className="mt-4 mb-2">
               <button
                 type="button"
-                onClick={() => signIn('google')}
+                onClick={() => signIn('google', { callbackUrl: '/me' })}
                 className="bg-nectar-extra-color-1 hover:bg-nectar-extra-color-1-hover text-white py-2 px-4 rounded text-sm mt-4 focus:outline-none"
               >
                 Login with Google
