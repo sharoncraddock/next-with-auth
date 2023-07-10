@@ -1,7 +1,7 @@
 import { options } from "../api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth/next"
 import { redirect } from "next/navigation"
-import LinkButton from '../components/link-button'
+import SignOutButton from '../components/sign-out-button'
 
 async function Me() {
 
@@ -22,7 +22,7 @@ async function Me() {
         <p className="mt-4">User account details:</p>
         <p className="mb-10 font-bold">{JSON.stringify(session)}</p>
         <div className="text-center">
-          <LinkButton text="Sign Out" href="/api/auth/signout" />
+          <SignOutButton />
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ export const options = {
       },
       async authorize(credentials) {
         // temp hard-coded user for local development; no DB at this point
-        const user = { id: "1", name: "Jon Smith", email: "jsmith@email.com", password: "password" }
+        const user = { id: "1", name: "Jon Smith", email: "jsmith@email.com", password: "test12345" }
 
         if (credentials?.email === user.email && credentials?.password === user.password) {
           return user

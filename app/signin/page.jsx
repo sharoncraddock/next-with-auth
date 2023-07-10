@@ -90,6 +90,7 @@ export default function LoginPage() {
           </form>
 
           <div className="text-center">
+            {/* This functionality not built for limited demo - visual only */}
             <a 
               className="underline underline-offset-3 block py-8" 
               href="/">Forgot/Create Password?
