@@ -7,10 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'nectar-accent-color': 'rgb(0, 79, 81)',
+        'nectar-accent-color-hover': 'rgb(0, 124, 128)',
+        'nectar-extra-color-1': 'rgb(0, 43, 73)',
+        'nectar-extra-color-1-hover': 'rgb(0, 88, 149)',
+        'nectar-extra-color-2': '#92C0E9',
+        'nectar-extra-color-3': '#B7CD96',
+        'custom-gray': '#ececec'
       },
     },
   },
