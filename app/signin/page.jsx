@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import LinkButton from '../components/link-button';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -129,6 +130,12 @@ export default function LoginPage() {
                 text="Desjardins Login" 
                 href="https://myapps.microsoft.com/signin/3bcff797-6c7a-4c86-ac74-f15adee3c1dc?tenantId=728d20a5-0b44-47dd-9470-20f37cbf2d9a" 
               />
+              <Link 
+                href="https://project-center.theleadershipcircle.com/privacy/The%20Leadership%20Circle%20%20-%20Privacy%20Policy%20-%20US.pdf"
+                className="underline underline-offset-3 pt-6 pb-0"
+              >
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>
