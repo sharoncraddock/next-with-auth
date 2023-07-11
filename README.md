@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 Authentication package is [`next-auth`](https://next-auth.js.org/).
 
+Netlify live demo: [https://ubiquitous-souffle-96df03.netlify.app/signin](https://ubiquitous-souffle-96df03.netlify.app/signin)
+
 ### Getting Started
 
 Clone the repo:
