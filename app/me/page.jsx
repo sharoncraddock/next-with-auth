@@ -20,7 +20,7 @@ async function Me() {
           <span className="font-bold">{session?.user?.name}</span>
         </h2>
         <p className="mt-4">User account details:</p>
-        <p className="mb-10 font-bold">{JSON.stringify(session)}</p>
+        <p className="mb-10 font-bold break-all">{JSON.stringify(session)}</p>
         <div className="text-center">
           <SignOutButton />
         </div>
