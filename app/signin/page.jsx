@@ -12,7 +12,6 @@ export default function LoginPage() {
   const router = useRouter();
 
   const handleEmailChange = (e) => {
-    console.log(e.target.value);
     setEmail(e.target.value);
   };
 
