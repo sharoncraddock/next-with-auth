@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import LinkButton from '../components/link-button';
-import Image from 'next/image';
 import Link from 'next/link';
+import Logo from '../components/logo';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -46,15 +46,11 @@ export default function LoginPage() {
 
         <div className="bg-white rounded md:w-2/3">
           <div className="p-8">
-            <a href="https://project-center.theleadershipcircle.com/en-US/">
-              <Image 
-                alt="Project Center Home" 
-                src="/lc-logo.png" 
-                width="200" 
-                height="74" 
-                className="md:-ml-3"
-                priority="true" />
-            </a>
+            <div className="md:-ml-3">
+              <a href="https://project-center.theleadershipcircle.com/en-US/">
+                <Logo width="200" height="77" color="#333" />
+              </a>
+            </div>
             <form onSubmit={handleCredentialsLogin}>
               <div className="mt-4 mb-4">
                 <label htmlFor="email" className="block mb-1">
