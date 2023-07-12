@@ -15,6 +15,31 @@ Install dependencies:
 ```bash
 npm install
 ```
+Create `.env.local` file:  
+In order to use the local test user, you will need to:
+1) Create a new file, `.env.local` in the root directory of the project on your local machine (it will be ignored by git).
+2) Run this command in your terminal (this generates a token for your app to use locally to decode the JWT it generates):
+   
+  ```sh
+  openssl rand -base64 32
+  ```
+  
+3) Add the following values to `.env.local`:
+
+```sh
+NEXTAUTH_SECRET = your-generated-token-from-the-command-above
+NEXTAUTH_URL = http://localhost:3000
+```
+
+4) To use the Google login option locally: [Sign up for Google Cloud console account](https://console.cloud.google.com/)  
+   and generate the tokens below per the directions there.
+6) Add them in `.env.local` as shown:
+
+```sh
+GOOGLE_CLIENT_ID = your-google-client-id
+GOOGLE_CLIENT_SECRET = your-google-client-secret
+```
+
 Start the dev server:
 
 ```bash
@@ -25,8 +50,10 @@ Open [http://localhost:3000/signin](http://localhost:3000/singin) with your brow
 
 NOTE: There is currently only a single user that can be authenticated with email/password; use this user to test:
 
-**Email:** jsmith@email.com  
-**Password:** test12345
+```sh
+Email: jsmith@email.com  
+Password: test12345
+```
 
 You will need a gmail account to use the Login with Google feature.
 
